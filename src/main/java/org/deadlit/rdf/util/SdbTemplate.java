@@ -16,19 +16,7 @@ import com.hp.hpl.jena.sdb.graph.PrefixMappingSDB;
 import com.hp.hpl.jena.sdb.sql.SDBConnection;
 
 @ManagedResource
-public class SdbTemplate {
-    
-    public static interface ModelExecutionCallback<T> {
-        T execute(Model model);
-    }
-    public static abstract class ModelExecutionCallbackWithoutResult implements ModelExecutionCallback<Object> {
-        @Override
-        final public Object execute(Model model) {
-            executeWithoutResult(model);
-            return null;
-        }
-        protected abstract void executeWithoutResult(Model model);
-    }
+public class SdbTemplate implements ModelOperations {
     
     private final DataSource dataSource;
     private final StoreDesc storeDesc;
@@ -46,6 +34,7 @@ public class SdbTemplate {
         }
     }
     
+    @Override
     public <T> T withModel(ModelExecutionCallback<T> callback) {
         Store store = create();
         store.getLoader().setUseThreading(false);
