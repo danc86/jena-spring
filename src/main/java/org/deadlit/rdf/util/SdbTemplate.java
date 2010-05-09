@@ -5,10 +5,8 @@ import java.util.Map;
 
 import javax.sql.DataSource;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jmx.export.annotation.ManagedOperation;
 import org.springframework.jmx.export.annotation.ManagedResource;
-import org.springframework.stereotype.Component;
 
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.sdb.SDBFactory;
@@ -59,6 +57,7 @@ public class SdbTemplate {
                 model.close();
             }
         } finally {
+            store.getConnection().close();
             store.close();
         }
     }
