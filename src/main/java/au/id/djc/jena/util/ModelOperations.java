@@ -1,4 +1,4 @@
-package org.deadlit.rdf.util;
+package au.id.djc.jena.util;
 
 import com.hp.hpl.jena.rdf.model.Model;
 

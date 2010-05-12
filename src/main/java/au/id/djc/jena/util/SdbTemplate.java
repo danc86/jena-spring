@@ -1,4 +1,4 @@
-package org.deadlit.rdf.util;
+package au.id.djc.jena.util;
 
 import java.sql.SQLException;
 import java.util.Map;
