@@ -5,8 +5,22 @@
     <artifactId>jena-spring</artifactId>
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
-
     <name>Jena Spring integration</name>
+    <url>http://code.djc.id.au/</url>
+    
+    <distributionManagement>
+        <repository>
+            <id>code.djc.id.au</id>
+            <name>code.djc.id.au Maven repository</name>
+            <url>dav:http://code.djc.id.au/maven2/</url>
+        </repository>
+    </distributionManagement>
+    
+    <scm>
+        <url>http://code.djc.id.au/hg/jena-spring-master/</url>
+        <connection>scm:hg:http://code.djc.id.au/hg/jena-spring-master/</connection>
+        <developerConnection>scm:hg:file://${project.basedir}</developerConnection>
+    </scm>
 
     <properties>
         <spring.version>3.0.2.RELEASE</spring.version>
