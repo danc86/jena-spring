@@ -79,8 +79,8 @@
         </dependency>
         <dependency>
             <groupId>au.id.djc.jena</groupId>
-            <artifactId>jena</artifactId>
-            <version>2.6.4.1</version>
+            <artifactId>jena-core</artifactId>
+            <version>2.7.0.1</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.slf4j</groupId>
@@ -101,6 +101,10 @@
                 <exclusion>
                     <groupId>com.hp.hpl.jena</groupId>
                     <artifactId>jena</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.hp.hpl.jena</groupId>
+                    <artifactId>arq</artifactId>
                 </exclusion>
                 <exclusion>
                     <groupId>org.slf4j</groupId>
